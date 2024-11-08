@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP Address Converter</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container my-4">
+        <h2>IP Address and Netmask Converter</h2>
+        <form id="ipForm">
+            <div class="row g-3">
+                <div class="col">
+                    <label for="ip1" class="form-label">IP Address:</label>
+                    <input type="number" class="form-control" id="ip1" min="0" max="255" required>
+                </div>
+                <div class="col">
+                    <label for="ip2" class="form-label">&nbsp;</label>
+                    <input type="number" class="form-control" id="ip2" min="0" max="255" required>
+                </div>
+                <div class="col">
+                    <label for="ip3" class="form-label">&nbsp;</label>
+                    <input type="number" class="form-control" id="ip3" min="0" max="255" required>
+                </div>
+                <div class="col">
+                    <label for="ip4" class="form-label">&nbsp;</label>
+                    <input type="number" class="form-control" id="ip4" min="0" max="255" required>
+                </div>
+            </div>
+            <div class="row g-3 mt-3">
+                <div class="col">
+                    <label for="mask1" class="form-label">Netmask:</label>
+                    <input type="number" class="form-control" id="mask1" min="0" max="255" required>
+                </div>
+                <div class="col">
+                    <label for="mask2" class="form-label">&nbsp;</label>
+                    <input type="number" class="form-control" id="mask2" min="0" max="255" required>
+                </div>
+                <div class="col">
+                    <label for="mask3" class="form-label">&nbsp;</label>
+                    <input type="number" class="form-control" id="mask3" min="0" max="255" required>
+                </div>
+                <div class="col">
+                    <label for="mask4" class="form-label">&nbsp;</label>
+                    <input type="number" class="form-control" id="mask4" min="0" max="255" required>
+                </div>
+            </div>
+            <button type="button" class="btn btn-primary mt-3" onclick="calculate()">Convert</button>
+        </form>
+
+        <div class="mt-4">
+            <h4>Results</h4>
+            <p><strong>IP in Binary:</strong> <span id="binaryIp"></span></p>
+            <p><strong>Network Address:</strong> <span id="networkAddress"></span></p>
+            <p><strong>Broadcast Address:</strong> <span id="broadcastAddress"></span></p>
+            <p><strong>Number of Hosts:</strong> <span id="hostCount"></span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
